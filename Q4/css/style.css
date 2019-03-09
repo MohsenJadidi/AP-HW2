@@ -1,0 +1,55 @@
+body{
+
+	background:grey;
+}
+
+.navbar{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.col{
+	padding:0 !important;
+}
+
+.icons1{
+	padding-left: 75% !important;
+}
+.icons2{
+	padding-left: 65% !important;
+}
+.collapsible-body{
+	padding: 0 !important; 
+}
+
+.rightside{
+	border-style: solid;
+	border-width: 1px;
+}
+
+.out{
+	position: relative;
+	background-color: rgb(250, 251, 253) !important;
+}
+
+.in{
+	margin-left: 0rem !important;
+	width: 100%;
+	position: absolute;
+}
+
+.rightup{
+	width:50px;
+	padding-left:10px;
+	padding-top: 10px;
+
+}
+
+.message{
+	background-color: rgb(230, 230, 230);
+	position: absolute;
+	margin-top: 77%;
+	width: 99%;
+}
+
+
