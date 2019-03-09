@@ -43,14 +43,15 @@ int main()
     /* Remove duplicates */
     date_vec = unique(date_vec);
 
-    /* Calculate count of products and count of costumers */
+    /* Calculate count of products and count of costumers and wirit in file */
+    std::ofstream of{};
+	of.open("dbnew.txt");
     for(size_t i = 0; i < date_vec.size(); i++)
     {  
         int product_count{},costumer_count{};       /* Count of products and  ...
                                                        Count of costumers at one date */
         std::vector<int> product_vec,costumer_vec;  /* Vector of products and  ...
                                                        Vector of costumers at one date */
-
         for(size_t j = 0; j < order.size(); j++)
         {
             if(!order[j].date.compare(date_vec[i]))
@@ -63,17 +64,14 @@ int main()
         costumer_count = (unique(costumer_vec)).size(); // Remove duplicates from costumer_vec
 
         /* Write in console*/
-        std::cout << date_vec[i] << " ";
+        std::cout << "[" <<date_vec[i] << "] ";
         std::cout << product_count << " " << costumer_count << std::endl;
 
         /* Write in dbnew.txt file*/
-        std::ofstream of{};
-		of.open("dbnew.txt", std::ofstream::app);
-        of << date_vec[i] << " ";
+        of << "[" <<date_vec[i] << "] ";
         of << product_count << " " << costumer_count << std::endl;
-		of.close();
     }
-    
+    of.close();
     return 0;
 }
 
